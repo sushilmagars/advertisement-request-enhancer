@@ -7,3 +7,7 @@ Install all packages
 
 `npm install`
 
+Start server
+
+`npm start`
+
