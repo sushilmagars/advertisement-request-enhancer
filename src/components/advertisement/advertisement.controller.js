@@ -12,8 +12,8 @@ class AdvertisementCtrl {
      * Enhances incoming advertisement request by injecting new properties
      * @function enhanceRequest
      * @memberof AdvertisementCtrl
-     * @param {req} express request object 
-     * @param {res} express response object 
+     * @param {Object} req - express request object 
+     * @param {Object} res - express response object 
      */
     enhanceRequest(req, res) {
         const siteId = req.body.site.id;

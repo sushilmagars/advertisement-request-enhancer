@@ -5,6 +5,12 @@ const rp = require('request-promise');
 const _ = require('lodash');
 
 class AdvertisementService {
+    /**
+     * Process incoming advertisement request
+     * @function process
+     * @memberof AdvertisementService
+     * @param {Object} siteId
+     */
     static process(siteId) {
         if (!siteId) {
             throw new Error(`Site id must be provided. Provided site id: ${siteId}`);
@@ -31,6 +37,12 @@ class AdvertisementService {
         });
     }
 
+    /**
+     * Fetches demographic information
+     * @function getDemographicInformation
+     * @memberof AdvertisementService
+     * @param {Object} siteId
+     */
     static getDemographicInformation(siteId) {
         const requestUrl = `http://159.89.185.155:3000/api/sites/${siteId}/demographics`;
 
@@ -49,6 +61,12 @@ class AdvertisementService {
             });
     }
 
+    /**
+     * Fetches publisher information
+     * @function getPublisherInformation
+     * @memberof AdvertisementService
+     * @param {Object} siteId
+     */
     static getPublisherInformation(siteId) {
         const requestBody = {q: {siteID: siteId}};
 
@@ -57,6 +75,14 @@ class AdvertisementService {
             .then((payload) => AdvertisementService.makeApiCall(payload));
     }
 
+    /**
+     * Builds request payload
+     * @function buildRequestPayload
+     * @memberof AdvertisementService
+     * @param {String} method
+     * @param {String} apiUrl
+     * @param {Object} payload
+     */
     static buildRequestPayload(method, apiUrl, payload) {
         const options = {
             method: method,
@@ -75,6 +101,14 @@ class AdvertisementService {
         return options;
     }
 
+    /**
+     * Makes API call
+     * @function buildRequestPayload
+     * @memberof AdvertisementService
+     * @param {String} method
+     * @param {String} apiUrl
+     * @param {Object} payload
+     */
     static makeApiCall(requestBody) {
         return rp(requestBody);
     }
