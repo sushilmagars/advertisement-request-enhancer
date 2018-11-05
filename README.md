@@ -1,2 +1,2 @@
-# advertisement-request-enhancer
+# Advertisement request enhancer
 Microservice endpoint that enhances an incoming Advertisement Request with additional contextual information.
