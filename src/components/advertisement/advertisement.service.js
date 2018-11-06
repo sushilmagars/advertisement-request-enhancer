@@ -27,7 +27,7 @@ class AdvertisementService {
             if (!publisherIdExist) {
                 return Promise.reject(new Error('Publisher id was not received'));
             }
-
+            
             return Object.assign({}, {
                 site: {
                     publisher: publisherLookUpInfo.publisher,
