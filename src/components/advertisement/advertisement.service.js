@@ -27,7 +27,7 @@ class AdvertisementService {
             if (!publisherIdExist) {
                 return Promise.reject(new Error('Publisher id was not received'));
             }
-            
+
             return Object.assign({}, {
                 site: {
                     publisher: publisherLookUpInfo.publisher,
@@ -72,7 +72,7 @@ class AdvertisementService {
 
         return Promise.resolve()
             .then(() => AdvertisementService.buildRequestPayload('POST', config.publisherLookUpApi.url, requestBody))
-            .then((payload) => AdvertisementService.makeApiCall(payload));
+            .then((payload) => AdvertisementService.makeApiCall(payload))
     }
 
     /**

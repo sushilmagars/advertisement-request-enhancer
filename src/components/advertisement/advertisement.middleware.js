@@ -10,7 +10,7 @@ class AdvertisementMiddleware {
         const errors = validationResult(req);
         const contentType = res.getHeader('content-type');
         const {status: statusCode} = API_RESPONSES['general']['badRequest'];
-        
+
         if (!errors.isEmpty()) {
             return AppCtrl.sendResponse(res, statusCode, contentType, errors.array());
         }

@@ -25,5 +25,7 @@ app.use('*', function(req, res) {
 });
 
 app.listen(port, function() {
-    console.log(`listening on port ${port}`);
+    console.log(`listening on port ${port}...`);
 });
+
+module.exports = app;

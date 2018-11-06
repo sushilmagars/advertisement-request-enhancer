@@ -43,7 +43,7 @@ describe('Advertisement service tests', () => {
                 .should.be.rejectedWith(Error, 'Publisher id was not received');
         });
 
-        it ('should return proper response', () => {
+        it ('should return response with mandatory properties', () => {
             const expectedPublisherResponse = {publisher: {id: '23k5jdf9', name:'Foo LLC'}};
             const expectedDemogrhicResponse = {female_percent: 21.49, male_percent: 78.51};
             const expectedResponse = {
