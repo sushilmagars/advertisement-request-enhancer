@@ -6,9 +6,6 @@ const app = express();
 const bodyParser = require('body-parser');
 const API_RESPONSES = require('./src/shared/apiResponses.contants');
 
-// all routes
-const routes = require('./routes');
-
 // configurations
 const config = require('./config/environment'); 
 const port = config.port || 8080;

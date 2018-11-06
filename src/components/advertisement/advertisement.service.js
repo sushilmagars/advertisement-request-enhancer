@@ -1,6 +1,6 @@
 'use strict';
 const Promise = require('bluebird');
-const config = require('../../../config/environment')
+const config = require('../../../config/environment');
 const rp = require('request-promise');
 const _ = require('lodash');
 
@@ -13,7 +13,7 @@ class AdvertisementService {
      */
     static process(siteId) {
         if (!siteId) {
-            throw new Error(`Site id must be provided. Provided site id: ${siteId}`);
+            return Promise.reject(new Error(`Site id must be provided. Provided site id: ${siteId}`));
         }
 
         return Promise.props({
@@ -25,7 +25,7 @@ class AdvertisementService {
 
             // if publisher id is missing from the response, throw a 422 and stop transaction
             if (!publisherIdExist) {
-                throw new Error('Publisher id was not received');
+                return Promise.reject(new Error('Publisher id was not received'));
             }
 
             return Object.assign({}, {
