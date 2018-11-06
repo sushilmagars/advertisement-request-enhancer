@@ -1,4 +1,5 @@
 'use strict';
+require('dotenv').config({silent: true});
 
 const commonConfigurations = {
     port: process.env.PORT || 8080,
