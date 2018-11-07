@@ -24,8 +24,6 @@ npm start
 
 Use postman or your favorite rest client to send following request:
 
-URL
-
 ```
 URL: http://localhost:8080/advertisement/enhance
 Body: {
