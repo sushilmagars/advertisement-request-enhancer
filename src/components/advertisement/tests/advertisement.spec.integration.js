@@ -10,8 +10,6 @@ describe('Advertisement integration tests', () => {
     let data;
 
     beforeEach(function() {
-        this.timeout(10000);
-
         request = TestHelper.getSuperInstance();
         data = {
             site: {id: '123123', page: 'http://www.foo.com/why-foo'},
@@ -27,7 +25,6 @@ describe('Advertisement integration tests', () => {
 
     describe('POST /advertisement', function () {
         it('should return 200 with json response', function (done) {
-
             request.post(url)
                 .set('Content-Type', 'application/json')
                 .send(JSON.stringify(data))
@@ -36,7 +33,6 @@ describe('Advertisement integration tests', () => {
         });
 
         it('should return 404 if no resource is found', function (done) {
-
             request.post('/advertisement/someFakeUrl')
                 .set('Content-Type', 'application/json')
                 .send(JSON.stringify(data))
