@@ -11,3 +11,10 @@ Start server
 
 `npm start`
 
+To run unit tests
+
+`npm test`
+
+To Integration tests suite
+
+'npm run test:integration'
