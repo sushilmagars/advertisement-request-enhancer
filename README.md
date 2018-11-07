@@ -17,4 +17,4 @@ To run unit tests
 
 To Integration tests suite
 
-'npm run test:integration'
+`npm run test:integration`
