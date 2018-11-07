@@ -67,7 +67,8 @@ Expected response -
 	"user": {
 		"id": "9cb89r"
 	}
-}```
+}
+```
 
 ### Tests
 
