@@ -16,13 +16,29 @@ PORT=8080`
 
 `npm start`
 
+4. Use postman to hit following URL:
+
+URL - `http://localhost:8080/advertisement/enhance`
+Body - ```{
+	"site": {
+		"id": "123123",
+		"page": "http://www.foo.com/why-foo"
+	},
+	"device": {
+		"ip": "69.250.196.118"
+	},
+	"user": {
+		"id": "9cb89r"
+	}
+}```
+
 # Tests
 
-To run unit tests
+1. To run unit tests
 
 `npm test`
 
-To Integration tests suite
+2. To Integration tests suite
 
 `npm run test:integration`
 
