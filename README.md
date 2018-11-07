@@ -24,8 +24,10 @@ npm start
 
 Use postman or your favorite rest client to send following request:
 
+Request -
 ```
 URL: http://localhost:8080/advertisement/enhance
+METHOD: POST
 Body: {
 	"site": {
 		"id": "123123",
@@ -41,6 +43,32 @@ Body: {
 
 ```
 
+Expected response - 
+```
+{
+	"site": {
+		"id": "123123",
+		"page": "http://www.foo.com/why-foo",
+		"publisher": {
+			"id": "23k5jdf9",
+			"name": "Foo LLC"
+		},
+		"demographics": {
+			"female_percent": 21.49,
+			"male_percent": 78.51
+		}
+	},
+	"device": {
+		"ip": "69.250.196.118",
+		"geo": {
+			"country": "US"
+		}
+	},
+	"user": {
+		"id": "9cb89r"
+	}
+}```
+
 ### Tests
 
 To run unit tests
@@ -51,8 +79,6 @@ npm test
 
 To Integration tests suite
 
-```npm run test:integration```
-
-
-
-
+```
+npm run test:integration
+```
