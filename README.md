@@ -18,18 +18,17 @@ PORT=8080
 
 Start server
 
-```npm start```
+```
+npm start
+```
 
-Use postman to hit following URL:
+Use postman or your favorite rest client to send following request:
 
-`URL` 
+URL
 
-```http://localhost:8080/advertisement/enhance```
-
-
-Payload 
-
-```{
+```
+URL: http://localhost:8080/advertisement/enhance
+Body: {
 	"site": {
 		"id": "123123",
 		"page": "http://www.foo.com/why-foo"
@@ -40,7 +39,9 @@ Payload
 	"user": {
 		"id": "9cb89r"
 	}
-}```
+}
+
+```
 
 ### Tests
 
